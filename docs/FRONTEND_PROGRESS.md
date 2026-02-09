@@ -2,7 +2,7 @@
 
 **최종 갱신**: 2026-02-09 (4차)
 **기술 스택**: Next.js 16 / React 19 / TypeScript / pnpm
-**최신 커밋**: `8013d79` 프론트엔드 기본 포트를 3001로 변경하여 Grafana 충돌 해소
+**최신 커밋**: `d33ef04` SSE 실시간 알림 E2E 테스트 추가
 
 ---
 
@@ -10,6 +10,7 @@
 
 | 커밋 | 날짜 | 내용 |
 |------|------|------|
+| `d33ef04` | 2026-02-09 | test(e2e): SSE 실시간 알림 E2E 테스트 추가 |
 | `8013d79` | 2026-02-09 | fix: 프론트엔드 기본 포트를 3001로 변경하여 Grafana 충돌 해소 |
 | `01eddb5` | 2026-02-09 | fix: auth-store persist 미들웨어 추가 및 E2E 테스트 안정성 개선 |
 | `deba32e` | 2026-02-09 | feat: SSE 알림 레이아웃 연결 및 에러 바운더리/로딩 UI 추가 |
@@ -116,6 +117,7 @@ pnpm test:watch       # watch 모드
 |------|------|
 | `e2e/auth.spec.ts` | 회원가입 → 로그인 → 대시보드 |
 | `e2e/account.spec.ts` | 계좌 생성 → 충전 → 잔액 확인 |
+| `e2e/sse-notification.spec.ts` | SSE 실시간 알림 (송금 토스트 확인) |
 | `e2e/transfer.spec.ts` | 미인증 리다이렉트 |
 
 ```bash

@@ -33,7 +33,7 @@
 | Client State | Zustand |
 | Form / Validation | React Hook Form + Zod 4 |
 | HTTP | Axios (인터셉터 기반 토큰 관리) |
-| Test | Vitest + RTL (29개), Playwright E2E (3개) |
+| Test | Vitest + RTL (29개), Playwright E2E (4개) |
 
 ## 아키텍처
 
@@ -223,7 +223,7 @@ cd backend && ./gradlew test
 # 프론트엔드 단위 테스트 (29개, Vitest)
 cd frontend && pnpm test
 
-# 프론트엔드 E2E 테스트 (3개, Playwright)
+# 프론트엔드 E2E 테스트 (4개, Playwright)
 cd frontend && pnpm test:e2e
 
 # 부하 테스트 (k6, Docker 환경 권장)

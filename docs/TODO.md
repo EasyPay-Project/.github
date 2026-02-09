@@ -1,7 +1,7 @@
 # 다음 할 일 (TODO)
 
 **작성일**: 2026-02-09
-**기준**: 백엔드 `b02a3ed`, 프론트엔드 `8013d79` 커밋 기준
+**기준**: 백엔드 `048eb94`, 프론트엔드 `d33ef04` 커밋 기준
 
 ---
 
@@ -118,14 +118,13 @@ cd backend && docker-compose down -v
 | 2 | 계좌 생성→충전→잔액 | ✅ | ✅ account.spec.ts | API 정상, E2E waitForFunction 수정으로 PASS |
 | 3 | 송금 + 멱등성 | ✅ | ✅ transfer.spec.ts | COMPLETED, 양쪽 잔액 정확, 멱등성 캐시 동작 |
 | 4 | 결제→환불→잔액 복원 | ✅ | — | 결제 30,000원 → 환불 → 잔액 950,000원 복원 |
-| 5 | SSE 알림 | ⚠️ | — | 연결OK, Kafka발행OK, Consumer처리OK, curl 버퍼링으로 이벤트 미표시 |
+| 5 | SSE 알림 | ✅ | ✅ sse-notification.spec.ts | 연결OK, Kafka발행OK, 토스트 표시 확인 (userId 버그 수정 `048eb94`) |
 | 6 | 수동 정산 | ✅ | — | 배치 실행 성공, 당일 결제는 전일 기준으로 정산 미대상 (정상) |
 
 **단위 테스트**: 백엔드 48개 PASS, 프론트엔드 29개 PASS
-**E2E 테스트**: 3/3 PASS
+**E2E 테스트**: 4/4 PASS
 
-**잔여 이슈**:
-- SSE 시나리오 5 — Kafka 파이프라인 정상 동작 확인 (로그 기반). 브라우저 토스트 표시는 수동 검증 필요 (optional)
+**잔여 이슈**: 없음 ✅
 
 ---
 
@@ -136,8 +135,7 @@ cd backend && docker-compose down -v
 ```
 ✅ [백엔드] BE-1~4 완료 (SettlementService, Notification DTO, 테스트, 부하 테스트)
 ✅ [프론트엔드] FE-1~2 완료 (SSE 알림, 에러 바운더리)
-✅ [연동] INT-1 완료 (API 6개 시나리오, E2E 3개)
+✅ [연동] INT-1 완료 (API 6개 시나리오, E2E 4개, SSE 브라우저 검증 포함)
 
-남은 선택 작업:
-  [연동] SSE 브라우저 수동 검증 (optional, Kafka 파이프라인은 로그로 검증 완료)
+모든 작업 완료. 잔여 이슈 없음.
 ```

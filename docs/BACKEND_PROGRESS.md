@@ -2,7 +2,7 @@
 
 **최종 갱신**: 2026-02-09 (4차)
 **기술 스택**: Spring Boot 3.4.2 / Java 21 / Gradle
-**최신 커밋**: `b02a3ed` CORS에 localhost:3001 추가하여 Grafana 포트 충돌 해소
+**최신 커밋**: `048eb94` SSE 알림에 계좌 ID 대신 사용자 ID 전달
 
 ---
 
@@ -10,6 +10,7 @@
 
 | 커밋 | 날짜 | 내용 |
 |------|------|------|
+| `048eb94` | 2026-02-09 | fix(transfer): SSE 알림에 계좌 ID 대신 사용자 ID 전달 |
 | `b02a3ed` | 2026-02-09 | feat(common): CORS에 localhost:3001 추가하여 Grafana 포트 충돌 해소 |
 | `c1b1330` | 2026-02-09 | test(k6): 부하 테스트 실행 및 멱등성 스크립트 수정 |
 | `88cba9b` | 2026-02-09 | feat(infra,k6): Rate Limit 설정 외부화 및 k6 계좌 소유자 매칭 수정 |
