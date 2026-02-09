@@ -105,15 +105,15 @@ cd backend && docker-compose up -d postgres redis zookeeper kafka prometheus gra
 # 2. 백엔드 로컬 실행
 cd backend && ./gradlew bootRun
 
-# 3. 프론트엔드 실행 (포트 주의: Grafana와 동일 3000)
-cd frontend && pnpm dev -- -p 3001
+# 3. 프론트엔드 실행
+cd frontend && pnpm dev
 ```
 
 ### 접속 URL
 
 | 서비스 | URL |
 |--------|-----|
-| 프론트엔드 | http://localhost:3000 |
+| 프론트엔드 | http://localhost:3001 |
 | 백엔드 API | http://localhost:8080 |
 | Swagger UI | http://localhost:8080/swagger-ui |
 | Grafana | http://localhost:3000 (인프라) |
